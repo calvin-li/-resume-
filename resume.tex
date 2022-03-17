@@ -138,7 +138,7 @@ November 2019 - March 2020\\
 \begin{itemize}
 \item Worked on web app for tracking production at packaging factory
     \begin{itemize}
-    \item Improved CI/CD of system, bringing it in line with company-wide standards
+    \item Improved CI/CD of system, bringing it in line with company wide standards
     \item Learned some web development and containers
     \end{itemize}
 \end{itemize}
@@ -161,11 +161,22 @@ March 2020 - Present\\
     \item A simpler, cheaper version of Zonar's existing product geared towards light vehicles (eg cars and pickups) instead of large trucks
     \item Collaboration with parent company (Continental Ag), who developed the hardware
     \item System developed from the ground up as a part of a larger OEM platform, designed to eventually replace all the various services we currently have
+    \item Saw the product through from planning to launch (Dec. 2021) and beyond
+    \item Developed a load testing system that takes previously recorded input and replays it to simulate a system under load
+    \end{itemize}
+\item Helped plan and develop the OEM Platform
+    \begin{itemize}
+        \item This is a restructure of our services to be more generalized and use more shared code
+        \item Beginning with Light Duty TCU, and then integrating out older services
+        \item The idea is to create a common framework to ingest data from various sources, process it, and then send it to our backend
     \end{itemize}
 \item OEM systems made up of micro-services, mix of Google Cloud Functions and containers in GKE. Data handled using MemoryStore (Google Redis) and Google DataStore.
     \begin{itemize}
         \item Python used throughout
+        \item Heavy use of GitLab CI for continuous pre-prod deployments, and quick prod releases
+        \item Use Terraform to manage Google Cloud Infrastructure through code
     \end{itemize}
+\item They're based in Seattle, but have been primarily remote since I joined
 \end{itemize}
 
 \end{paracol}
