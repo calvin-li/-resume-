@@ -4,6 +4,8 @@
 \usepackage[document]{ragged2e}
 \usepackage{paracol}
 \usepackage{multicol}
+\usepackage{enumitem}
+\setlist{nosep}
 
 \begin{document}
 \columnratio{0.75}\begin{paracol}{2}
@@ -25,117 +27,137 @@
 \end{paracol}
 
 \bigskip
+(Profile goes here)
 
-    {\Large \textbf{University of California, Davis}}
-    \\
-    2014 - B.S. Computer Science
-    \\
-    2016 - M.S. Computer Science
-    \\
-    \medskip
-    \textbf{Research Project: Random testing of database engines}
-    \begin{itemize}
-        \item Randomly generate test cases (SQL queries) in order to look for bugs in database engines
-        \item Test for correctness by transforming queries to equivalent ones and comparing
-        \item Can also test correctness by running queries on multiple engines
-    \end{itemize}
+\bigskip
+{\large \textbf{Programming Languages and Technologies}}\\
+\smallskip
+    Python $|$
+    Google Cloud $|$
+    Kubernetes $|$
+    CI/CD $|$
+    Terraform $|$
+    DevOps $|$
+    Git $|$
+    Datadog $|$
+    Kotlin $|$
+    AWS $|$
+    C\# $|$
+    Typescript
 
     \bigskip
-    {\Large \textbf{Zonar Systems, Inc}}
-    \medskip
+    {\large \textbf{Work Experience}}\\
+    \smallskip
 
-    September 2024 - September 2026
-    \\
-    \textbf{Tech Lead}, Vietnam OCI Team
-    \begin{itemize}
-        \item Technical lead for a contractor team in Vietnam. Directed their work and handled communications between them and Zonar side people
-        \item Team worked on integrating third-party dual dashcam to record driver safety events. Helped the team adapt to constantly changing requirements and deliver on schedule
-    \end{itemize}
-    September 2024 - September 2025
-    \\
-    \textbf{Tech Lead}, Vietnam Support Team
-    \begin{itemize}
-         \item Technical lead for the off-hours support team in Vietnam. Team provides on-call coverage for all the other Vietnam contractor teams
-         \item Improved the teams' incident readiness and response times
-         \item Trained them to be more comfortable with raising incidents
-    \end{itemize}
-    \textbf{Senior SDE}, Data Services Team\\
+    \columnratio{0.73}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Senior SDE, Data Services Team}
+    \switchcolumn
+    9/2024 - 9/2026, Seattle WA
+    \end{paracol}
     \begin{itemize}
         \item Contribute to new features and maintainance of the Zonar Pipeline (ZPL) team's various projects
         \item Team had over a dozen projects, ranging from legacy to brand new, focused on moving data around within the Zonar backend
         \item Quickly ramped up to help with on-call load, and worked on improvements to the teams monitoring and metrics to reduce alert noise
     \end{itemize}
+    \smallskip
 
-    March 2023 - September 2024\\
-    \textbf{Senior Software Engineer}, Gateway Integrations team (formerly OEM)
+    \columnratio{0.67}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Tech Lead, OCI Team}
+    \switchcolumn
+    9/2024 - 9/2026, Remote (Vietnam)
+    \end{paracol}
+    \begin{itemize}
+        \item Technical lead for a contractor team in Vietnam. Directed their work and handled communications between them and Zonar side people
+        \item Team worked on integrating third-party dual dashcam to record driver safety events. Helped the team adapt to constantly changing requirements and deliver on schedule
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.67}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Tech Lead, Vietnam Support Team}
+    \switchcolumn
+    9/2024 - 9/2025, Remote (Vietnam)
+    \end{paracol}
+    \begin{itemize}
+         \item Technical lead for the off-hours support team in Vietnam. Team provides on-call coverage for all the other Vietnam contractor teams
+         \item Improved the teams' incident readiness and response times
+         \item Trained them to be more comfortable with raising incidents
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.73}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Senior SDE, Gateway Integrations team}
+    \switchcolumn
+    3/2023 - 9/2024, Seattle WA
+    \end{paracol}
     \begin{itemize}
         \item Helped develop Light Duty Telematics Control Unit (LDTCU) system, simpler, cheaper version of Zonar's existing product. Saw it through from planning to launch.
         \item Lead the development of the harsh acceleration/braking detection in LDTCU. Responsible for the process of translating raw data from device into events that can go into our backend database
         \item Mentored our summer intern and helped organize the company-wide hackathon.
     \end{itemize}
+    \smallskip
 
-    March 2020 - March 2023\\
-    \textbf{Software Engineer II}, OEM team
+    \columnratio{0.73}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Software Engineer II, OEM team}
+    \switchcolumn
+    3/2020 - 3/2023, Seattle WA
+    \end{paracol}
     \begin{itemize}
         \item Helped plan and develop the OEM Platform, which generalized the data ingestion process and made it easier to onboard and maintain data sources
         \item Maintained existing OEM services and uplifted them to\\ OEM Platform
     \end{itemize}
+    \smallskip
 
-    \bigskip
-    {\Large \textbf{Zume, Inc}}\\
-    \medskip
-    November 2019 - March 2020\\
-    \textbf{Software Engineer}
+    \columnratio{0.72}
+    \begin{paracol}{2}
+    \textbf{Zume Inc, Software Engineer, Packaging}
+    \switchcolumn
+    11/2019 - 3/2020, Seattle WA
+    \end{paracol}
     \begin{itemize}
         \item Worked on web app for tracking production at packaging factory
     \end{itemize}
+    \smallskip
 
-    \bigskip
-    {\Large \textbf{Microsoft Corporation}}\\
-    \medskip
-    August 2017 - June 2019\\
-    \textbf{Software Engineer}, Microsoft Graph API
+    \columnratio{0.71}
+    \begin{paracol}{2}
+    \textbf{Microsoft Corporation, Software Engineer, Microsoft Graph API}
+    \switchcolumn
+    8/2017 - 6/2019, Redmond WA
+    \end{paracol}
     \begin{itemize}
         \item Expanded service into new cloud environment (US government)
         \item Took ownership of our integration testing service
         \item Split time between feature development and maintenance of 4 nines uptime
         \item Part of the on-call rotation, maintained 4 nines uptime
     \end{itemize}
+    \smallskip
 
-    June 2016 - August 2017\\
-    \textbf{Software Engineer}, Azure AD Graph API
+    \columnratio{0.71}
+    \begin{paracol}{2}
+    \textbf{Microsoft Corporation, Software Engineer, Azure AD Graph API}
+    \switchcolumn
+    6/2016 - 8/2017, Redmond WA
+    \end{paracol}
     \begin{itemize}
         \item Implemented publisher domain verification to Applications API for app security
         \item Maintained legacy SDK and improved automation for updating to new versions. Also worked with users to transition them to successor product (Microsoft Graph)
     \end{itemize}
 
-    June 2015 - September 2015\\
-    \textbf{Software Engineer Intern}, Microsoft Authenticator App (iOS)
-    \begin{itemize}
-        \item Added fingerprint authentication and Apple Watch integration
-    \end{itemize}
-
     \bigskip
-    {\large \textbf{Programming Languages and \\Technologies}}
-
-    \setlength{\columnseprule}{0cm}
-
-    \begin{multicols}{3}
-        Python\\
-        Google Cloud\\
-        Kubernetes\\
-        CI/CD\\
-        Terraform\\
-        DevOps\\
-        Git\\
-        Datadog \\
-        Kotlin\\
-        AWS\\
-        Java\\
-        Typescript\\
-        C\#\\
-        Azure \\
-    \end{multicols}
+    {\large \textbf{Education}}\\
+    \smallskip
+    \textbf{University of California, Davis}
+    \\ Bachelor of Science Computer Science, Master of Science Computer Science
+    \medskip \\
+    \textbf{Software Engineer Intern}, Microsoft Authenticator App, 6/2015 - 9/2015\\
+    \begin{itemize}
+        \item Added fingerprint authentication and Apple Watch integration, reducing time needed to authenticate by 80$\%$ without compromising security
+    \end{itemize}
 
     \bigskip
     {\large \textbf{Personal Projects}}
@@ -148,5 +170,4 @@
         \item Android app I made to help me track tasks using the notification system
         \item Source code on Github, also on the Play Store
     \end{itemize}
-
 \end{document}
