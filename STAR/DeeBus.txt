@@ -1,0 +1,32 @@
+(Talk about the process of turning DeeBus into a happy LDTCU customer)
+Situation 
+- Our team had just released a Light Duty version of our telematics device
+- This was the first major project that we've released since my manager and I started
+- The product targets fleets with cars, vans, pickup trucks, etc rather than semis. 
+- One of our early users was a school bus fleet with over a hundred vans that would only work with the light duty devices
+Task
+- The customer installed light duty devices on their whole van fleet
+- As they used the new devices, issues started to pop up:
+  - The most serious one was the hardware causing the battery in the vans to drain overnight
+  - Firmware issues cause individual devices to lose signal and stop sending data, so the customer would not know where a vehicle full of children is
+  - There were also times where the GPS trace would go all over the place due to ordering issues
+  - The odometer would get wildly overestimated
+- The customer was getting pretty upset with all these issues, and threatened to pull their whole contract, including their heavy duty busses
+Action
+- Clearly, we needed to make things right with this customer 
+- We also recognized that this was an opportunity take candid feedback and use it to improve our product. Other customers could be having issues with the same root causes and just not being as vocal
+- The primary thing we did was commit to fixing issues. 
+  - We ramped up in-house testing
+  - We set up a communication pipeline so the customer can email or call us whenever they see a serious issue, and someone on the dev team will be directly notified and work on troubleshooting
+- A lot of these problems stemmed from the hardware, which, as a software team, we couldn't do much about directly
+- The software team was critical here because we were the first line of investigation. We had to determine if the root cause was with our software, the device firmware, or the device itself, as a different team would be responsible in each case.
+- I developed software tools and procedures to quickly search through our logs for the trip data in question.
+- Knowing if we got input data and if it matched what we'd expected from the vehicle went a long way to pinpointing which part of the system it came from.
+- We developed a habit of overcommunicating with the particular customer, giving them frequent updates as the issue worked through our internal proccesses
+Result
+- It took some time, but eventually we figured out all the issues
+- There were hardware, firmware, and software problems which made problem solving slower
+- However we showed the customer that we were committed to improving the product and were listening to them, as soon as issues came up
+- This helped them be more patient. 
+- Ultimately, the customers have a problem they want us to solve, so they want to be able to use our device. Even if they couldn't at the moment, because we showed them we were working on it, they were willing to wait
+- A few months after release, all the problems had been fixed or worked around, and our relationship with that customer was even better than before

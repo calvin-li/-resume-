@@ -1,0 +1,32 @@
+(Describe how you automated the Azure AD SDK update process)
+Situation
+- Early on, I was on the Azure AD Graph API team at Microsoft
+- This is a REST API that is used to manage people and groups
+- Active directory is an old product, we have a lot users that aren't familiar with REST APIs and just want to use .NET library
+- Our team provides this library, which abstracts all the api entities into library classes 
+Task
+- The library needs to be updated whenever the API changes, even if it's not a breaking change
+- For example, if we added a new attribute to say, groups, the it won't be available in the current version of the library
+- The task was seen as busy-work and given to the most junior engineer, me
+- There was an old, poorly documented OneNote that would generate the classes from the API schema, but it was imperfect and required a lot of manual adjustment afterwards
+- We didn't have any tests of the results, we were basically supposed to just trust the process and publish whatever the script generated
+- This made it very hard to debug customer issues, and the update process itself could take a whole day because of all the manual adjustment and testing required. 
+Action
+- I figured out the update process best I could at the time
+- Did the updates for a few months, somehow became the "expert" 
+- Also understood a bit more about how we got into this situation. We wanted to deprecate the API entirely, so we didn't have resources to spend on the supplemental SDK 
+- So big changes like rewriting the script were not possible
+- Instead, I focused on automating the existing process, particularly the post-script manual adjustments
+- I added extra code that would modify the generated code
+- I also automated most of the steps to prepare the compiled SDK for publishing
+- Was able to verify the changes by comparing the new generated code to the released version
+- The library still wasn't that well tested, but this was because the base generation code had barely any automated testing. Without developing unit and integrated testing, we couldn't do much better there
+- I brought this up with my manager and we decided to take a calculated risk in with the library testing. We weren't going get new users and the current ones were slowly migrating over to the new API, so as long as we avoided drastic changes we were unlikely to get regressions.
+Result
+- Cut down the library generation time from potentially hours to a few minutes
+- I used the new scripts for the next few years until I left Microsoft
+- Never had any issues with the new library versions
+- More importantly, it taught me to be aware of repetitive, time consuming tasks and consider automating them, which has helped me throughout the rest of my career.
+    - Often nobody will explicitly tell you to do that, it's something one needs to figure out by themselves
+- Also, sometimes it's good to deviate from what is by-the-books the best practice. 
+- Don't blindly stick with a process just because you've been told to do things that way, really try to understand the reasoning behind in order to iterate and improve
