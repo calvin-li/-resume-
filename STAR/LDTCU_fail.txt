@@ -1,5 +1,11 @@
-(Tell me about a time you failed. How did you deal with the situation?)
+Situation:
 Team was working on Light Duty product, something that can do most of the tracking that our full-sized hardware does, but cheaper and easier to install. The firmware was developed by a team with our parent company in Europe.
+
+Task:
 Our team was responsible for ingesting the data into the Zonar backend. We didn't really have any ability to make changes there. This includes the data scheme and how that schema is surfaced to customers. 
+
+Action:
 We had a lot of delays when launching the product and poor customer satisfaction. There were many small differences in the semantics of the Light Duty data, requiring a lot of translation. There was inherently high latency because the data was generated in North America, but had to go to ingestion servers in Europe, before returning to the Zonar backend in NA. We also didn't have sequence numbers on the data, instead relying solely on timestamps to order the data, which resulted in a lot of it being out of order. This meant we frequently got bad data translation issues, especially with estimated odometer values. Eventually we got this into a good place with a lot of testing and debugging, but the product has a slow start. Using our own hardware also massively increased our overhead costs. The product as originally designed wouldn't make business sense unless we could sell it in Europe, and that never materialized. 
+
+Result:
 The project went on for another year after GA, I learned a lot and worked with some talented engineers from Continental. Ultimately, we decided to scrap the hardware and recreate the product with a third party device. This while process took a year, from choosing a hardware partner to recreating the data pipeline and migrating customers. The hardware solution we ended up using was much cheaper with lower latency. Using the more mature product also made the ingestion and translation easier. We officially sunsetted the old system and are still using the new one today.

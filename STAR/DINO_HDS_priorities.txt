@@ -1,5 +1,11 @@
-(Describe a situation where you had to juggle multiple tasks with tight deadlines. What strategies did you use to manage your time effectively?)
+Situation:
 Last year, my company went through a round of layoffs that left other teams short-handed. Multiple other teams were moved under my manager, and I switched to one of them. I went from working on third party data ingestion to moving data within the Zonar backend. In addition, I took over the lead role for one of our contractor teams in Vietnam, my first time being a lead.
+
+Task:
 I had to adapt to the pipeline team and ramp up, especially to help with their on-call. Meanwhile, the Vietnam team had just started a project for an important customer with intermediate deadlines and an end-of-year date for GA.
+
+Action:
 I assessed my short term goals for both roles, and how they might fit into the timeline. The main focus was the Vietnam team's work; I took their list of backlog tickets and tried to fit them into the upcoming sprints, making note of upcoming holiday periods and intermediate deadlines. I figured out how to reorder the work to deliver features on time via delaying testing automation and documentation. For the software engineer role with my new team, I focused the bandwidth I had on learning their existing systems. I identified on call help as being more important for team workload and morale, since existing customers still needed the same level of support regardless of the reduced team size.
+
+Result:
 For the Vietnam team, we focused on pushing out features quickly, with the understanding that the engineering quality work will be done later, during the US holiday period. This let us make features available for our customers sooner. Ultimately, we were able to fully GA shortly into the new year. For the Seattle team, I joined the on call rotation within two months of joining the team. I also learned a lot about their projects and made improvements to our runbooks and monitors. Afterwards, I settled into a more equal split between the two roles and was able to be more hands-off with the Vietnam team.
