@@ -1,0 +1,26 @@
+Situation:
+- Early career, at Microsoft
+- On the Azure Active Directory Graph team
+- REST API that manages identity. Users, groups, and applications
+
+Task:
+- Implement domain verification
+- This allows app owners to link their domain names to their applications
+- Needs to work with subdomains that the app owner does not own, specifically "onmicrosoft.com" subdomains, so checking DNS records won't work
+- The design was handed down to me. The API backend would go to a predetermined location in the domain and check for a file with the app identity
+- Needed to implement this new endpoint, plus unit and integration tests
+- There was a fairly strict deadline, wanted to get this ready for a conference
+
+Action:
+- Basic implementation was fairly easy and done on time.
+- Created the new endpoint, added the Http calls to check for the app ID
+- Added safeguards against misconfigured or malicious domains
+- Testing these safeguards proved very difficult, as I needed to spoof the domain with the different possible errors in our test environment
+
+Result:
+- The difficulties in testing delayed the deployment of the feature and we missed the conference deadline
+- After the conference passed, the feature was deprioritized and I split time with other work. Although it was pretty close to completion, the feature was not deployed until months later
+- In hindsight, I would have called out the testing challenges in the planning phase
+- Could look for alternatives in the design, or more help from the beginning
+- Could've had DNS-based verification first, and file-based verification as a fallback implemented later
+- Also could (should) havelooked out for instances code that that goes to an arbitrary endpoint. Could follow their example, or connect with the original developer

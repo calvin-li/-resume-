@@ -1,0 +1,30 @@
+Situation:
+- Our team had recently hired three new developers
+- We wanted to onboard these new devs as quickly and smoothly as possible
+- We hadn't hired anyone new for a few years at this point, so even though I was two years in, I was still the most recently onboarded dev
+- The projects we work on and the tech stack we use had changed a good bit by then
+
+Task:
+- I had to redesign the onboarding process for the team's new hires
+- We wanted this to be reusable for when we hired more in the future
+- We were responsible for a variety of old services that we could mostly, but not completely, leave alone. 
+- The onboarding resources could give all devs something to reference if they need to work on an older, unfamiliar system
+- This evolved into a pretty large project
+
+Action:
+- I started with the existing guides that I used when I onboarded
+- Mostly focused on tech setup
+- This was pretty straightforward to update, remove instructions for old stuff, add instructions for new tech, try the existing instructions to make sure they work
+- Then, I arranged deep dive presentations for each of the various projects our team owns, and for general concepts like code reviews
+- Each presentation was done by either me, another dev, or our manager
+- They were recorded, and most had slides and Confluence notes
+- Everything was bundled up into one Confluence notebook for later reference
+- Overall we had a dozen or so presentations, did them over two weeks
+
+Result:
+- New team members were ready to contribute shortly after the onboarding presentations
+- A process that could take months for a junior engineer ended up taking two weeks instead
+- The new hires were happy; reported having a smooth experience onboarding
+- Having the resources gave us the confidence to move some of the older devs to other teams, without worrying about missing tribal knowledge
+- Within a year, the majority of the team was made up of the new hires
+- The two that weren't senior engineers got promoted within a two years at Zonar

@@ -1,60 +1,175 @@
-\documentclass[10pt]{article}
+\documentclass[]{article}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[letterpaper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[papersize={8.5in,11in},top=2cm,bottom=2cm,left=2.25cm,right=2.25cm]{geometry}
+\usepackage[T1]{fontenc}
 \usepackage{helvet}
+\usepackage{anyfontsize} 
 \usepackage[document]{ragged2e}
 \usepackage{paracol}
 \usepackage{multicol}
+\usepackage{enumitem}
+\pagenumbering{gobble}
+\setlist{topsep=0.3pt, itemsep=0.3pt, partopsep=0.3pt, parsep=0.3pt}
 
 \begin{document}
-\columnratio{0.4} \begin{paracol}{2}
+\fontsize{9.5pt}{11.4pt}\selectfont
+\columnratio{0.75}\begin{paracol}{2}
 
-    {\huge\textbf{Calvin Li}}
-    \\
+    {\huge \textbf{Calvin Li}}
+    \\\medskip
+    {\large Seattle, WA}
+     
+    \setlength{\columnsep}{1cm}
+    \setlength{\columnseprule}{1px}
+    \switchcolumn
+
     calvinliqh@gmail.com
     \\
     (415) 271-1380
     \\
-    Seattle, WA
-    \\
     \textbf{github.com/calvin-li}
 
+\end{paracol}
+
+\bigskip
+Backend software engineer focused on data services with high throughput and high availability, including systems with billions of daily requests at 99.99\% uptime. Skilled in building for reliability and leading globally distributed teams. Demonstrated leadership as tech lead across multiple projects, consistently enabling overseas developers to deliver on time. Experienced across the full development lifecycle, from design and planning to coding and on-call.
+
+\bigskip
+{\large \textbf{Programming Languages and Technologies}}\\
+\smallskip
+    \centerline{
+        Python $|$
+        Google Cloud $|$
+        Terraform $|$
+        DevOps $|$
+        ETL $|$
+        Git $|$
+        Datadog $|$
+        Copilot Chat $|$
+        Kubernetes $|$
+        Kotlin $|$
+        C\# $|$
+        AWS $|$
+        Kafka $|$
+        Typescript
+    }
     \bigskip
+    {\large \textbf{Work Experience}}\\
+    \smallskip
 
-    {\large \textbf{University of California, Davis}}
-    \\
-    2014 - B.S. Computer Science
-    \\
-    2016 - M.S. Computer Science
-
-    \textbf{Research Project: Random testing of database engines}
-    \\
+    \columnratio{0.75}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Senior SDE, Data Services Team}
+    \switchcolumn
+    \textbf{09/24 - 09/26, Seattle WA}
+    \end{paracol}
     \begin{itemize}
-        \item Randomly generate test cases (SQL queries) in order to look for bugs in database engines
-        \item Test for correctness by transforming queries to equivalent ones and comparing
-        \item Can also test correctness by running queries on multiple engines
+        \item Primary maintainer for our internal routing service. Tuned Datadog and PagerDuty to eliminate false P1 alerts and secured cloud capacity to prevent peak backlogs in our 500M msgs/day system.
+        \item Assumed on-call maintenance for over a dozen legacy side projects. Kept systems live and shipped required updates, often without original developers.
+        \item Built Kafka ingestion for a vendor dashcam event stream processing 10M messages a day, filtering safety events from routine telemetry for downstream enrichment.
+        \item Orchestrated driver-vehicle association sync, streaming 5,000 driver asset assignments per day from GCP to AWS Kinesis via Apache Beam, unifying fleet visibility across clouds.
+        \item Leveraged Copilot Chat (Claude) to deliver an Apigee gateway with zero prior platform experience. Estimated 75\% reduction in setup time versus comparable past work.
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.68}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Tech Lead, OCI Team}
+    \switchcolumn
+    \textbf{09/24 - 09/26, Remote (Vietnam)}
+    \end{paracol}
+    \begin{itemize}
+        \item Coordinated global communications and JIRA sprint planning for an eight-person overseas development team, maintaining on-time project delivery at an estimated 25\% of the cost.
+        \item Directed a third-party integration for 10,000 dashcams recording safety events and driver associations, absorbing frequent requirement shifts to secure an on-time launch.
+        \item Managed the certification of Zonar hardware across three CARB-CTC protocols, automating mandatory emissions checks while reducing costs by up to 80\%.
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.68}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Tech Lead, Vietnam Support Team}
+    \switchcolumn
+    \textbf{09/24 - 09/25, Remote (Vietnam)}
+    \end{paracol}
+    \begin{itemize}
+         \item Led an eight-person off-hours support team providing on-call coverage and 99.9\% uptime for 10 Vietnam-based contractor teams.
+         \item Instilled a "false positives over false negatives" incident culture on the team. Traveled onsite to coach and eliminated false negatives entirely.
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.75}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Senior SDE, Gateway Integrations team}
+    \switchcolumn
+    \textbf{03/23 - 09/24, Seattle WA}
+    \end{paracol}
+    \begin{itemize}
+        \item Diagnosed and triaged customer-facing issues during Light Duty TCU field tests and beta trials. Worked with customer care and firmware teams to root-cause issues within eight hours.
+        \item Led harsh event detection for LDTCU. Owned the end-to-end translation of raw sensor data into harsh acceleration/turning/braking events with minimal false positives.
+        \item Mentored a summer intern through a successful PubSub-to-BigQuery PoC that became production infrastructure, still in use today.
+        \item Co-organized the company-wide hackathon to foster in-person cross-team collaboration following reopening of the office.
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.75}
+    \begin{paracol}{2}
+    \textbf{Zonar Systems Inc, Software Engineer II, OEM team}
+    \switchcolumn
+    \textbf{03/20 - 03/23, Seattle WA}
+    \end{paracol}
+    \begin{itemize}
+        \item Built LDTCU's odometer estimation system, stack-ranking speed and GPS to bypass OBD stop-only odometer data. Added telemetry to track method accuracy over time.
+        \item Co-developed the OEM Platform, creating a generic ingestion framework that reduced time for onboarding new data sources from months to weeks.
+        \item Transitioned legacy on-prem OEM services onto the OEM Platform, eliminating boilerplate and enabling full decommissioning of physical infrastructure.
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.75}
+    \begin{paracol}{2}
+    \textbf{Zume Inc, Software Engineer, Packaging}
+    \switchcolumn
+    \textbf{11/19 - 01/20, Seattle WA}
+    \end{paracol}
+    \begin{itemize}
+        \item Worked on web app for tracking production at packaging factory
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.72}
+    \begin{paracol}{2}
+    \textbf{Microsoft Corporation, Software Engineer, Microsoft Graph REST API}
+    \switchcolumn
+    \textbf{08/17 - 06/19, Redmond WA}
+    \end{paracol}
+    \begin{itemize}
+        \item Resolved production issues for Microsoft Graph's US DoD deployment under restricted access, and coordinating with cleared personnel for live-system diagnostics.
+        \item Delivered feature work and on-call coverage for Microsoft Graph at the scale of billions of daily requests, maintaining 99.99\% uptime.
+    \end{itemize}
+    \smallskip
+
+    \columnratio{0.72}
+    \begin{paracol}{2}
+    \textbf{Microsoft Corporation, Software Engineer, Azure AD Graph REST API}
+    \switchcolumn
+    \textbf{06/16 - 08/17, Redmond WA}
+    \end{paracol}
+    \begin{itemize}
+        \item Implemented publisher domain verification for applications in the AAD Graph REST API, validating domain ownership via a well-known file check to enable secure app consent prompts.
+        \item Automated the legacy SDK pipeline (updates, versioning, signing), slashing publish time from hours to minutes.
     \end{itemize}
 
-    {\large \textbf{Programming Languages and \\Technologies}}
+    \bigskip
+    {\large \textbf{Education}}\\
+    \smallskip
+    \textbf{University of California, Davis}
+    \\ Bachelor of Science Computer Science, Master of Science Computer Science
+    \medskip \\
+    \textbf{Software Engineer Intern}, Microsoft Authenticator App, 6/2015 - 9/2015\\
+    \begin{itemize}
+        \item Added fingerprint authentication and Apple Watch integration, reducing time needed to authenticate by up to 80\% without compromising security.
+    \end{itemize}
 
-    \setlength{\columnseprule}{0cm}
-
-    \begin{multicols}{2}
-        Python\\
-        Kotlin\\
-        Azure\\
-        Kubernetes\\
-        CI/CD\\
-        LaTex\\
-
-        C\#\\
-        Google Cloud\\
-        DevOps\\
-        Git\\
-        On-call\\
-        Terraform\\
-    \end{multicols}
-
+    \bigskip
     {\large \textbf{Personal Projects}}
     \smallskip \\
     \textbf{Quest}
@@ -65,86 +180,4 @@
         \item Android app I made to help me track tasks using the notification system
         \item Source code on Github, also on the Play Store
     \end{itemize}
-
-    \setlength{\columnsep}{1cm}
-    \setlength{\columnseprule}{1px}
-    \switchcolumn
-
-    \bigskip
-    {\Large \textbf{Zonar Systems, Inc}}
-
-
-   September 2024 - Present\\
-   \medskip
-   \textbf{Tech Lead}, Vietnam OCI Team
-   \begin{itemize}
-        \item Technical lead for a contractor team in Vietnam. Directed their work and handled communications between them and Zonar side people
-        \item Team worked on integrating third-party dual dashcam to record driver safety events. I helped the team adapt to constantly changing requirements and deliver on schedule
-        \item Under my leaderhip, Zonar's V4 hardware was certified for CA's Clean Truck Check program, one of only 3 continuously connected devices certified for the J1979 port
-    \end{itemize}
-    \textbf{Tech Lead}, Vietnam Support Team
-    \begin{itemize}
-         \item Technical lead for the off-hours support team in Vietnam. Team provides on-call coverage for all the other Vietnam contractor teams
-         \item Improved the teams' incident readiness and response times
-         \item Trained them to be more comfortable with raising incidents
-    \end{itemize}
-    \textbf{Senior SDE}, Pipeline Team\\
-    \begin{itemize}
-        \item Contribute to new features and maintainance of the Zonar Pipeline (ZPL) team's various projects
-        \item Team had over a dozen projects, ranging from legacy to brand new, focused on moving data around within the Zonar backend
-        \item Quickly ramped up to help with on-call load, and worked on improvements to the teams monitoring and metrics to reduce alert noise
-    \end{itemize}
-
-
-    March 2023 - September 2024\\
-    \textbf{Senior Software Engineer}, Gateway Integrations team (formerly OEM)
-    \begin{itemize}
-        \item Helped develop Light Duty Telematics Control Unit (LDTCU) system, simpler, cheaper version of Zonar's existing product. Saw it through from planning to launch.
-        \item Lead the development of the harsh acceleration/braking detection in LDTCU. Responsible for the process of translating raw data from device into events that can go into our backend database
-        \item Mentored our summer intern and helped organize the company-wide hackathon.
-    \end{itemize}
-
-
-    March 2020 - March 2023\\
-    \textbf{Software Engineer II}, OEM team
-    \begin{itemize}
-        \item Helped plan and develop the OEM Platform, which generalized the data ingestion process and made it easier to onboard and maintain data sources
-        \item Maintained existing OEM services and uplifted them to\\ OEM Platform
-    \end{itemize}
-
-    \bigskip
-    {\Large \textbf{Zume, Inc}}
-
-    November 2019 - March 2020\\
-    \textbf{Software Engineer}
-    \begin{itemize}
-        \item Worked on web app for tracking production at packaging factory
-    \end{itemize}
-
-    \bigskip
-    {\Large \textbf{Microsoft Corporation}}
-
-    August 2017 - June 2019\\
-    \textbf{Software Engineer}, Microsoft Graph API
-    \begin{itemize}
-        \item Expanded service into new cloud environment (US government)
-        \item Took ownership of our integration testing service
-        \item Split time between feature development and maintenance of 4 nines uptime
-        \item Part of the on-call rotation, maintained 4 nines uptime
-    \end{itemize}
-
-    June 2016 - August 2017\\
-    \textbf{Software Engineer}, Azure AD Graph API
-    \begin{itemize}
-        \item Implemented publisher domain verification to Applications API for app security
-        \item Maintained legacy SDK and improved automation for updating to new versions. Also worked with users to transition them to successor product (Microsoft Graph)
-    \end{itemize}
-
-    June 2015 - September 2015\\
-    \textbf{Software Engineer Intern}, Microsoft Authenticator App (iOS)
-    \begin{itemize}
-        \item Added fingerprint authentication and Apple Watch integration
-    \end{itemize}
-
-\end{paracol}
 \end{document}

@@ -1,0 +1,41 @@
+Situation:
+- Zonar employs several contractor teams in Vietnam
+- I took over the leadership of one of these teams after layoffs
+- Team specializes in bringing in data from third party sources that don't fit our regular ingestion system
+- The lead is not the team's manager, not are they formally part of the dev team
+- Rather they handle communication between the people in Vietnam and North America
+- Make sure the dev team understands the requirements.
+- Also that their work items are set up properly in Jira
+- Make sure management on the Zonar side is aware of what the team is working on and the existing roadmap
+- Extra important because these teams' devs are often reassigned, or have different projects added on
+
+Task:
+- When I took over as lead, they had just started a new project
+- We have third party dashcams installed for some customers. These cameras could detect safety events using computer vision (things like running red lights, lane drifting, etc)
+- Team had to take safety events from the third party's notification system and translate and insert them into the Zonar backend
+- The devices also have a card reader that could associate a driver with a vehicle trip. We also had to notify on these events and insert them as well
+- The project evolved in scope as we worked on it. 
+- We added a couple of extra features. 
+    - Instead of simply inserting the safety events into the backend data store, we also sent it to Zonar's email alert service
+    - We also sent trip data back the other way, to the device partner, to sync driver IDs for both sides
+
+Action:
+- Keeping to the original roadmap was a challenge with all the requirement changes
+- We also initially had some false starts where what the Vietnam team developed was different from the intended solution
+    - Mostly minor logical differences
+- Finally, the required business logic would change (slightly) with customer feedback
+- I focused on reducing the logic issues and getting all features working
+- Rearranged the order of work to get all basic implementation done first, then test automation, documentation, and refactoring will follow after
+- I got more involved with the actual programming than leads usually do. It was easier to show intended logic through code than through English
+    - I would code up the basic logic changes (often one or two lines, or changing a key name, etc) and the dev team will do everything else to get it production-ready and deploy
+- I also worked closely with product and customer care. We had users trying out the features as we released them, and they would have feedback or questions.
+- I would address any questions and that helped issues get resolved on the same day, rather than having to wait for devs in Vietnam to answer overnight. This saved a lot of time because we usually needed multiple back-and-forth messages to figure out the problem
+    - This also helped show the customer we were responsive, so they were more accepting of any release dates that had to be pushed back
+
+Result:
+- The team got all features ready before the end of the year (3 months after I became team lead) despite the additional scope.
+- Team rounded out the engineering quality tasks over December, things like test automation and documentation
+- Product officially went GA mid-January 2025
+- System has since handled millions of safety events and trips across thousands of devices for some of our biggest customers, without any major issues
+- I also settled in as team lead. I have a deeper relationship with the dev team now and can be more hands-off.
+- We have since completed another major project and are maintaining and addressing tech debt for several older systems

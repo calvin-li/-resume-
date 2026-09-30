@@ -1,0 +1,31 @@
+Situation:
+- Shortly after I started at Zonar we were developing a "Light Duty" product. 
+- It  was meant to provide most of the tracking features of our regular hardware, but at a lower cost and with easier installation.
+- We had to replicate the features of the in-market product as much as possible
+- We were working with a new hardware vendor and making the firmware in-house
+- The device only got odometer data when the vehicle was stopped.
+- The discrepancy will grow large over the course of a highway trip
+
+Task:
+-  I had to build a system to estimate the odometer while the vehicle was moving.
+- The estimation needed to be accurate, but err on the side of underestimation. Our frontend did not support odometer numbers decreasing
+
+Action:
+- My research found two ways of doing the estimation
+- Use the current and previous GPS points
+- Average the speeds from the previous two points, and multiply by time between the two points
+- I built the odometer function to keep track of all the estimation methods (GPS, speed, etc), correcting them whenever we got a real odometer reading. The function was coded to make it easy to change the order of preference of the methods.
+- I also added metrics to track the difference between each estimation method and real odometer.
+- This gave us insight over time into which method provided the most high-quality estimates.
+- Finally, I set up field testing with our customer care team
+- We had several Zonar employees install devices to their own cars and also had someone rent vehicles and try driving them with various routes and connectivity scenarios. 
+
+Result:
+- Initially, we had some trouble getting data good enough to actually use for estimates.
+- The big problem was that data could arrive out of order, missing data due to connection issues, and semantic differences in the device and our backend (null island issue).
+- We stuck with our field testing and incorporated data from customers that saw problems.
+- I added an ordering function that could predict if GPS points were missing for a device and hold its data until the missing points arrived. The data didn't have sequence numbers, but I was able to use the timestamp to guess if there was missing data
+- This brought our in-order rate from the low 90s up to 99.9%.
+- We also developed more safeguards against obvious odometer over-estimates due to bad data, preferring to show no information over bad information.
+- By working diligently and being responsive to customers and field testers, my system was able to get the odometer estimate consistently within 1% of the real reading
+- Most importantly, we made out beta customers happy

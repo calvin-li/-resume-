@@ -1,0 +1,11 @@
+Situation: 
+Early post merger, other half of the company had a separate AWS tech stack. We were trying to quickly establish data parity by syncing data across the clouds in both directions.
+
+Task: 
+I had to add a sync for driver-vehicle associations. We had already set up a GCP-AWS dataflow job to send data across, but the two backends had different ways of counting a "vehicle". The GCP side created a new entity, an "asset", using the device-vehicle pairings, and created another entity on top of that pairing assets with drivers. The AWS side had driver as a property of a device.
+
+Action: 
+I created a change listener for driver associations creations on the GCP side, and a new job in the GCP-AWS dataflow that would take the process the new association, look up the device associated in our internal API, and send both over to the AWS ingestion via Kinesis. On the AWS side I updated the ingestion lambda to make the update the given device with the driver.
+
+Result:
+This was my first time working with Dataflow or the AWS stack. This became a good opportunity for me to learn both, and I got the sync working in a couple of weeks. It is still active, syncing about 5000 driver associations per day, but we have mostly moved on to the combined frontend based on GCP.
