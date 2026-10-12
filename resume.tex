@@ -1,6 +1,6 @@
 \documentclass[]{article}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[papersize={8.5in,11in},top=2cm,bottom=2cm,left=2.25cm,right=2.25cm]{geometry}
+\usepackage[papersize={8.5in,12.5in},top=2cm,bottom=2cm,left=2.25cm,right=2.25cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
 \usepackage{anyfontsize} 
@@ -49,9 +49,7 @@ Backend software engineer focused on data services with high throughput and high
         Kubernetes $|$
         Kotlin $|$
         C\# $|$
-        AWS $|$
-        Kafka $|$
-        Typescript
+        AWS
     }
     \bigskip
     {\large \textbf{Work Experience}}\\
@@ -65,7 +63,6 @@ Backend software engineer focused on data services with high throughput and high
     \end{paracol}
     \begin{itemize}
         \item Primary maintainer for our internal routing service. Tuned Datadog and PagerDuty to eliminate false P1 alerts and secured cloud capacity to prevent peak backlogs in our 500M msgs/day system.
-        \item Assumed on-call maintenance for over a dozen legacy side projects. Kept systems live and shipped required updates, often without original developers.
         \item Built Kafka ingestion for a vendor dashcam event stream processing 10M messages a day, filtering safety events from routine telemetry for downstream enrichment.
         \item Orchestrated driver-vehicle association sync, streaming 5,000 driver asset assignments per day from GCP to AWS Kinesis via Apache Beam, unifying fleet visibility across clouds.
         \item Leveraged Copilot Chat (Claude) to deliver an Apigee gateway with zero prior platform experience. Estimated 75\% reduction in setup time versus comparable past work.
@@ -107,7 +104,6 @@ Backend software engineer focused on data services with high throughput and high
         \item Diagnosed and triaged customer-facing issues during Light Duty TCU field tests and beta trials. Worked with customer care and firmware teams to root-cause issues within eight hours.
         \item Led harsh event detection for LDTCU. Owned the end-to-end translation of raw sensor data into harsh acceleration/turning/braking events with minimal false positives.
         \item Mentored a summer intern through a successful PubSub-to-BigQuery PoC that became production infrastructure, still in use today.
-        \item Co-organized the company-wide hackathon to foster in-person cross-team collaboration following reopening of the office.
     \end{itemize}
     \smallskip
 
@@ -121,17 +117,6 @@ Backend software engineer focused on data services with high throughput and high
         \item Built LDTCU's odometer estimation system, stack-ranking speed and GPS to bypass OBD stop-only odometer data. Added telemetry to track method accuracy over time.
         \item Co-developed the OEM Platform, creating a generic ingestion framework that reduced time for onboarding new data sources from months to weeks.
         \item Transitioned legacy on-prem OEM services onto the OEM Platform, eliminating boilerplate and enabling full decommissioning of physical infrastructure.
-    \end{itemize}
-    \smallskip
-
-    \columnratio{0.75}
-    \begin{paracol}{2}
-    \textbf{Zume Inc, Software Engineer, Packaging}
-    \switchcolumn
-    \textbf{11/19 - 01/20, Seattle WA}
-    \end{paracol}
-    \begin{itemize}
-        \item Worked on web app for tracking production at packaging factory
     \end{itemize}
     \smallskip
 
@@ -163,21 +148,4 @@ Backend software engineer focused on data services with high throughput and high
     \smallskip
     \textbf{University of California, Davis}
     \\ Bachelor of Science Computer Science, Master of Science Computer Science
-    \medskip \\
-    \textbf{Software Engineer Intern}, Microsoft Authenticator App, 6/2015 - 9/2015\\
-    \begin{itemize}
-        \item Added fingerprint authentication and Apple Watch integration, reducing time needed to authenticate by up to 80\% without compromising security.
-    \end{itemize}
-
-    \bigskip
-    {\large \textbf{Personal Projects}}
-    \smallskip \\
-    \textbf{Quest}
-    \\
-    github.com/calvin-li/Quest
-    \\
-    \begin{itemize}
-        \item Android app I made to help me track tasks using the notification system
-        \item Source code on Github, also on the Play Store
-    \end{itemize}
 \end{document}
